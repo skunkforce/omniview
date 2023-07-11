@@ -8,6 +8,31 @@ Der Prototype wird kontinuierlich geupdated und soll das Entwicklungsergebnis vi
 Die konkreten Entwicklungsschritte werden im [https://github.com/orgs/skunkforce/projects/1](Projektplan) festgehalten, welcher von @markuskae gepflegt wird.
 
 ## Hilfe und Onboarding
-Auf [https://moodle.aw4null.de/](unserer Lernplattform) finden sich weitere Hilfen und Ressourcen zum aw4null Projekt. Ansprechpartner ist @wasilina83 
+Auf [ https://moodle.aw4null.de/ ](unserer Lernplattform) finden sich weitere Hilfen und Ressourcen zum aw4null Projekt. Ansprechpartner ist @wasilina83 
 
 ## Teilnehmen und Mitarbeiten
+
+
+## Buildprozess Linux
+installiere vcpkg
+
+ins OmniView Verzeichnis wechseln
+
+submodule updaten und initalisieren:
+`git submodule update --init --recursive`
+
+-buildordner erstellen:
+`mkdir build`
+
+in den buildordner navigieren:
+`cd build`
+
+cmake ausführen mit dem pfad zu vcpgk:
+`cmake .. -DCMAKE_TOOLCHAIN_FILE=<vcpk_root>/scripts/buildsystems/vcpkg.cmake`
+
+make ausführen:
+`make`
+
+OmniView ausführen:
+`./OmniView`
+
